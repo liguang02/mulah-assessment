@@ -1,0 +1,54 @@
+<head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <h2>Author: Chai Li Guang</h2>
+    <h3>Table 1:</h3>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            width: 12%;
+            border-collapse: collapse;
+        }
+        th{
+            text-align: left;
+        }
+    </style>
+
+</head>
+<div>
+
+    <table>
+        <tr>
+            <th>Index#</th>
+            <th>Value</th>
+        </tr>
+        <% for (let i = 0; i<data.length; i++) { %>
+            <tr>
+                <td><%= data[i][0] %></td>
+                <td style="text-align: right;"><%= data[i][1] %></td>
+            </tr>
+        <% } %>
+    </table>
+    <br>
+    <h3>Table 2:</h3>
+    <table>
+        <tr>
+            <th style = "text-align: center;">Category</th>
+            <th style = "text-align: center;">Value</th>
+        </tr>
+        <tr style = "text-align: center;">
+            <td>Alpha</td>
+            <td><%= parseInt(data[4][1]) + parseInt(data[19][1]) %></td>
+        </tr>
+        <tr style = "text-align: center;">
+            <td>Beta</td>
+            <td><%= parseInt(data[14][1])/parseInt(data[6][1]) %></td>
+        </tr>
+        <tr style = "text-align: center;">
+            <td>Charlie</td>
+            <td><%= parseInt(data[12][1]) * parseInt(data[11][1]) %></td>
+        </tr>
+    </table>
+        
+</div>
